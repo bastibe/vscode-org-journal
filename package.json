@@ -1,0 +1,63 @@
+{
+  "name": "org-journal",
+  "displayName": "org-journal",
+  "description": "A VSCode version of org-journal",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "org-journal.today",
+        "title": "Org-Journal: Today"
+      },
+      {
+        "command": "org-journal.search",
+        "title": "Org-Journal: Search"
+      },
+      {
+        "command": "org-journal.previousDay",
+        "title": "Org-Journal: Go to previous day"
+      },
+      {
+        "command": "org-journal.nextDay",
+        "title": "Org-Journal: Go to next day"
+      }
+    ],
+    "configuration": {
+      "title": "OrgJournal",
+      "properties": {
+        "org-journal.journalDirectory": {
+          "type": "string",
+          "default": "~\\Documents\\journal",
+          "description": "The directory for your journal files"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.86.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.9"
+  }
+}
