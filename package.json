@@ -2,6 +2,7 @@
   "name": "org-journal",
   "displayName": "org-journal",
   "description": "A VSCode version of org-journal",
+  "repository": "https://github.com/bastibe/vscode-org-journal",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.86.0"
@@ -50,14 +51,14 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.86.0",
     "@types/mocha": "^10.0.6",
-    "@types/node": "18.x",
+    "@types/node": "^18.19.17",
+    "@types/vscode": "^1.86.0",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
-    "eslint": "^8.56.0",
-    "typescript": "^5.3.3",
     "@vscode/test-cli": "^0.0.4",
-    "@vscode/test-electron": "^2.3.9"
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
   }
 }
