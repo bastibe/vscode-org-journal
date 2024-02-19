@@ -2,6 +2,12 @@
 
 A simple port of Emacs' org-journal to VSCode
 
+## Installation
+
+- clone
+- `npm install @types/node --save-dev`
+- `vsce package`
+
 ## Features
 
 Currently supports opening the current day's journal, and navigating to the next/previous day.
@@ -18,11 +24,12 @@ This extension contributes the following settings:
 
 ## Known Issues
 
-- does not yet insert today's date.
-- no searching.
-
 ## Release Notes
 
 ### 0.0.1
 
 Initial release
+
+### 0.0.2 2024-02-19
+
+Implements search and adds license
