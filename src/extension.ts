@@ -97,7 +97,10 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(today);
 
 	let search = vscode.commands.registerCommand('org-journal.search', () => {
-		vscode.window.showInformationMessage('org-journal: search');
+		const config = vscode.workspace.getConfiguration('org-journal');
+		let journalDir = String(config.get('journalDirectory'));
+		journalDir = journalDir.replaceAll('~', os.homedir()) + '/*.org';
+		let success = vscode.commands.executeCommand('workbench.action.findInFiles', {'filesToInclude': journalDir});
 	});
 	context.subscriptions.push(search);
 
